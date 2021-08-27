@@ -1,0 +1,43 @@
+module.exports = {
+    parser: '@typescript-eslint/parser',
+    extends: ['plugin:@typescript-eslint/recommended'],
+    plugins: ['@typescript-eslint', 'unused-imports', 'prefer-arrow'],
+    rules: {
+        '@typescript-eslint/naming-convention': [
+            'error',
+            {
+                selector: 'class',
+                format: ['PascalCase'],
+            },
+        ],
+        'no-multiple-empty-lines': [
+            'error',
+            {
+                max: 1,
+                maxEOF: 1,
+                maxBOF: 0,
+            },
+        ],
+        'no-caller': 'error',
+        'no-bitwise': 'error',
+        'no-debugger': 'error',
+        'no-eval': 'error',
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': 'error',
+        'no-shadow-restricted-names': 'error',
+        'no-throw-literal': 'error',
+        'no-fallthrough': 'error',
+        'no-trailing-spaces': 'error',
+        'no-unused-expressions': 'error',
+        'no-var': 'error',
+        'prefer-const': 'error',
+        '@typescript-eslint/no-empty-interface': 'off',
+        semi: ['error', 'always'],
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-shadow': 'off',
+        'unused-imports/no-unused-imports-ts': 'error',
+        'unused-imports/no-unused-vars-ts': ['error', { vars: 'all', varsIgnorePattern: '^_', args: 'none' }],
+    },
+};

@@ -1,0 +1,33 @@
+{
+    "name": "o18k-ts-aws",
+    "version": "0.0.1",
+    "description": "daysmart's implementation of observation framework using AWS Lambda using typescript and Serverless Framework",
+    "main": "dist/index.js",
+    "scripts": {
+        "lint": "eslint . --ignore-path .gitignore",
+        "lint:fix": "npm run lint -- --fix",
+        "lint:all": "npm run lint && npm run prettier:check",
+        "lint:fixAll": "npm run lint:fix && npm run prettier:fix",
+        "prettier:check": "prettier -c --ignore-path .prettierignore \"**\" --ignore-unknown",
+        "prettier:fix": "prettier --write --ignore-path .prettierignore \"**\" --ignore-unknown",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "aws-sdk": "^2.908.0",
+        "axios": "^0.21.1",
+        "dsi-aws-boilerplate": "^4.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^15.3.0",
+        "@typescript-eslint/eslint-plugin": "^4.28.1",
+        "@typescript-eslint/parser": "^4.28.1",
+        "eslint-plugin-import": "2.22.1",
+        "eslint-plugin-prefer-arrow": "1.2.3",
+        "eslint-plugin-unused-imports": "1.1.0",
+        "prettier": "2.2.1",
+        "eslint": "^7.30.0",
+        "typescript": "^4.3.5"
+    }
+}
