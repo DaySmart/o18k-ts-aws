@@ -84,6 +84,17 @@ export async function httpAxiosActor(event: any, context: any, template: Templat
                     local_datetime: handlerContext.time.toISOString(),
                 };
             });
+        } else if (cell.auth && cell.auth.type === 'basic_auth') {
+            const username = handlerContext[cell.auth.usernameContextProperty];
+            const password = handlerContext[cell.auth.passwordContextProperty];
+            if (!username || !password) throw new Error(`Context is missing required auth property.`);
+
+            requests.forEach((request) => {
+                request.auth = {
+                    username,
+                    password,
+                };
+            });
         }
 
         const responses: AxiosResponse[] = await Promise.all(requests.map((r) => axios.request(r)));

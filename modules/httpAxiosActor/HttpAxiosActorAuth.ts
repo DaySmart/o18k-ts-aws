@@ -1,5 +1,5 @@
 export interface HttpAxiosActorAuth {
-    type: 'oauth' | 'secret_key';
+    type: 'oauth' | 'secret_key' | 'basic_auth';
     clientIdContextProperty?: string;
     clientSecretContextProperty?: string;
     usernameContextProperty?: string;
