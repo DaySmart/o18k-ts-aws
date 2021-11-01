@@ -64,6 +64,7 @@ export * from './modules/customResponseObserver/CustomResponseObserver';
 export * from './modules/customResponseObserver/CustomResponseObserverModule';
 
 export * from './modules/parameterStoreContext/ParameterStore';
+export * from './modules/processEnvContext/ProcessEnv';
 
 export * from './modules/winstonLoggerModule/WinstonLoggerModule';
 
