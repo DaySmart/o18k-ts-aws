@@ -50,6 +50,12 @@ export * from './modules/lambdaDecider/lambdaDecider';
 export * from './modules/customActor/CustomActorModule';
 export * from './modules/customActor/customActor';
 
+export * from './modules/awsFirehoseActor/AwsFirehoseActorHandle';
+export * from './modules/awsFirehoseActor/AwsFirehoseActorModule';
+export * from './modules/awsFirehoseActor/AwsFirehoseActorModuleRoutingMessage';
+export * from './modules/awsFirehoseActor/awsFirehoseActor';
+export * from './modules/awsFirehoseActor/getAwsFirehoseActorCell';
+
 export * from './modules/httpAxiosActor/HttpAxiosActorAuth';
 export * from './modules/httpAxiosActor/HttpAxiosActorHandle';
 export * from './modules/httpAxiosActor/getHttpAxiosActorCell';

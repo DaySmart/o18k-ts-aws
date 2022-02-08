@@ -21,7 +21,7 @@ export interface Component {
 
 export interface Cell extends Component {
     logger: Logger;
-    saveToRepository: boolean;
+    saveToRepository?: boolean;
 }
 
 export interface ReceivingCell extends Cell {
@@ -33,7 +33,7 @@ export interface ReceivingCell extends Cell {
 export type CreatorCell = Cell;
 
 export interface Actor extends ReceivingCell {
-    handle: ActorHandle<IEntityObservation>;
+    handle?: ActorHandle<IEntityObservation>;
 }
 export interface Decider extends ReceivingCell, CreatorCell {
     handle: DeciderHandle<IEntityObservation>;
