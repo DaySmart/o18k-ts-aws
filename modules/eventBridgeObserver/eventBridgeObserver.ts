@@ -1,6 +1,6 @@
 import { getDefaultLogger } from '../../util/getDefaultLogger';
 import { Template } from '../../interfaces/template/Template';
-import { EventBridgeObserverModule } from './EventBridgeObserverModule';
+import { EventBridgeObserverModule } from './eventBridgeObserverModule';
 
 export async function EventBridgeObserver(event, context, template: Template) {
     context.callbackWaitsForEmptyEventLoop = true;
@@ -29,6 +29,7 @@ export async function EventBridgeObserver(event, context, template: Template) {
 }
 
 function getEventBridgeObserverCell(event, template: Template): EventBridgeObserverModule {
+    // TODO: Fix this
     const topicArn = event.Records && event.Records[0] && (event.Records[0].Sns.TopicArn as string);
     for (let i = 0; i < template.externalEntities.length; i++) {
         for (let j = 0; j < template.externalEntities[i].observers.length; j++) {

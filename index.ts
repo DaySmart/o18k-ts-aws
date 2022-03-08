@@ -56,6 +56,9 @@ export * from './modules/awsFirehoseActor/AwsFirehoseActorModuleRoutingMessage';
 export * from './modules/awsFirehoseActor/awsFirehoseActor';
 export * from './modules/awsFirehoseActor/getAwsFirehoseActorCell';
 
+export * from './modules/eventBridgeObserver/eventBridgeObserverModule';
+export * from './modules/eventBridgeObserver/eventBridgeObserver';
+
 export * from './modules/httpAxiosActor/HttpAxiosActorAuth';
 export * from './modules/httpAxiosActor/HttpAxiosActorHandle';
 export * from './modules/httpAxiosActor/getHttpAxiosActorCell';
