@@ -74,5 +74,5 @@ function getAppSyncRequestObserverCell(event, template: Template): AppSyncReques
         }
     }
 
-    throw new Error('Observer cell not found');
+    throw new Error('Observer cell not found for operation: ' + operation);
 }

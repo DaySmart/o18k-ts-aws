@@ -16,8 +16,8 @@ export async function retrieveSecretsFromParameterStore(): Promise<{ [key: strin
                 .promise();
             secrets = JSON.parse(getParameterResponse.Parameter.Value);
         } catch (ex) {
-            console.log('Failed getting secrets.', { error: ex });
-            throw new Error(ex);
+            console.log('Failed getting secrets.', { error: ex.toString() });
+            throw ex;
         }
     }
     return secrets;

@@ -39,5 +39,5 @@ function getSnsTopicObserverCell(event, template: Template): SnsTopicObserverMod
         }
     }
 
-    throw new Error('Observer cell not found');
+    throw new Error('Observer cell not found for SNS Topic ARN: ' + topicArn);
 }

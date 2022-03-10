@@ -47,5 +47,5 @@ function getCloudWatchLogObserverCell(message, template: Template): CloudWatchLo
         }
     }
 
-    throw new Error('Observer cell not found');
+    throw new Error('Observer cell not found for logGroup: ' + logGroup);
 }

@@ -95,5 +95,5 @@ function getApiGatewayRequestObserverCell(event, template: Template): ApiGateway
         }
     }
 
-    throw new Error('Observer cell not found');
+    throw new Error('Observer cell not found for path: ' + path + ' and method: ' + method);
 }
