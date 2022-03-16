@@ -29,12 +29,11 @@ export async function EventBridgeObserver(event, context, template: Template) {
 }
 
 function getEventBridgeObserverCell(event, template: Template): EventBridgeObserverModule {
-    // TODO: Fix this
-    const topicArn = event.Records && event.Records[0] && (event.Records[0].Sns.TopicArn as string);
+    const source = event.source;
     for (let i = 0; i < template.externalEntities.length; i++) {
         for (let j = 0; j < template.externalEntities[i].observers.length; j++) {
             const current = template.externalEntities[i].observers[j];
-            if (topicArn && topicArn.indexOf(current.topicArnMatch) > -1) {
+            if (source && source.indexOf(current.eventSourceMatch) > -1) {
                 return current.cell as EventBridgeObserverModule;
             }
         }
