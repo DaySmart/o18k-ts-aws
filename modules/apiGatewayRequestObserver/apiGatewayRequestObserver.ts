@@ -24,8 +24,8 @@ export async function apiGatewayRequestObserver(event, context, template: Templa
     try {
         observations = cell.handle(event, context);
     } catch (err) {
-        const errorMessage = err.message ? err.message : err;
-        cell.logger.info(`[ApiGatewayHttpObserver.handlerError]`, { errorMessage, stacktrace: err.stack });
+        const errorMessage = err['message'] ? err['message'] : err;
+        cell.logger.info(`[ApiGatewayHttpObserver.handlerError]`, { errorMessage, stacktrace: err['stack'] });
         return {
             statusCode: 400,
             body: JSON.stringify(errorMessage),

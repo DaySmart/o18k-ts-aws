@@ -9,4 +9,5 @@ export interface ObserverCellWrapper {
     module?: string;
     logGroupMatch?: string;
     topicArnMatch?: string;
+    eventSourceMatch?: string;
 }
