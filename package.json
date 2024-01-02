@@ -17,7 +17,7 @@
     "dependencies": {
         "aws-sdk": "^2.908.0",
         "axios": "^0.21.1",
-        "dsi-aws-boilerplate": "^4.0.2"
+        "dsi-aws-boilerplate": "^4.0.8"
     },
     "devDependencies": {
         "@types/node": "^15.3.0",
